@@ -42,11 +42,11 @@ function display() {
         <tr>
                     <td>${i}</td>
                     <td>${bookMarkContainer[i].name}</td>
-                    <td><button onclick="visit(${i})" class="btn btn-success px-4 visit-button"><i class="fa-solid fa-eye pe-1"></i> Visit</button></td>
-                    <td><button onclick="deleteProduct(${i});" class="btn btn-danger px-4"><i class="fa-solid fa-trash pe-1"></i> Delete</button></td>
+                    <td><button onclick="visit(${i})" class="btn btn-success px-4 visit-button my-3"><i class="fa-solid fa-eye pe-1"></i> Visit</button></td>
+                    <td><button onclick="deleteProduct(${i});" class="btn btn-danger px-4 my-3"><i class="fa-solid fa-trash pe-1"></i> Delete</button></td>
                     <td>
-                    <button onclick="setFormForUpdate(${i})" id="btn1" class="btn btn-primary px-4"><i class="fa-solid fa-pen pe-1"></i> Update</button>
-                    <button onclick="updateProduct(${i})" id="btn2" class="btn btn-warning px-4">Done</button>
+                    <button onclick="setFormForUpdate(${i})" id="btn1" class="btn btn-primary px-4 my-3"><i class="fa-solid fa-pen pe-1"></i> Update</button>
+                    <button onclick="updateProduct(${i})" id="btn2" class="btn btn-warning px-4 my-3">Done</button>
                     </td>
                 </tr>`
     }
