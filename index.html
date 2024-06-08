@@ -26,7 +26,7 @@
                     <i class="fa-solid fa-book pe-2"></i>
                     Site Name
                 </label>
-                <input oninput="validation(this)" type="email" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+                <input oninput="validation(this)"  type="email" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
                 <div class="alert alert-danger my-2 p-1 d-none">
                     <p>Name Must Start with..... </p>
                 </div>
@@ -36,13 +36,17 @@
                     <i class="fa-solid fa-link pe-2"></i>
                     Site URL
                 </label>
-                <input oninput="validation(this)" type="email" class="form-control" id="bookmarkURL" placeholder="Website URL">
+                <input oninput="validation(this)"  type="email" class="form-control" id="bookmarkURL" placeholder="Website URL">
                 <div class="alert alert-danger my-2 p-1 d-none">
                     <p>URL Must Start with..... </p>
                 </div>
             </div>
-            <button onclick="addProduct();" class="btn btn-danger px-5 ">Submit</button>
+            <button onclick="addProduct();" id="btn1"  class="btn btn-outline-danger px-5 w-100">Submit</button>
+            <button onclick="updateproduct();" id="btn2" class="btn btn-outline-success px-5 d-none w-100">Update</button>
         </div>
+
+        <input oninput="searchProduct();" type="text" class="form-control shadow-none mt-4 d-none" id="productSearch"
+            placeholder="Search Name">
         <table class="table text-center mt-4">
             <thead>
                 <tr>
@@ -94,6 +98,7 @@
     <script src="
     https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js
     "></script>
-    <script src="js/index.js"></script>
+    <script src="js/index1.js"></script>
+
 </body>
 </html>

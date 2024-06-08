@@ -1,13 +1,17 @@
 var bookMarkNameInput = document.getElementById("bookmarkName");
 var bookMarkURLInput = document.getElementById("bookmarkURL");
-var bookMarkContainer = [];
+var bookMarkContainer;
 var buttonUpdate = document.getElementById("btn1");
 var buttonDone = document.getElementById("btn2");
 var alertInput = document.getElementById("alert");
+
 if (localStorage.getItem("products") !== null) {
     bookMarkContainer = JSON.parse(localStorage.getItem("products"));
     display();
+}else{
+    bookMarkContainer = [];
 }
+
 function addProduct() {
 
     if (
@@ -22,11 +26,14 @@ function addProduct() {
         localStorage.setItem("products", JSON.stringify(bookMarkContainer));
         display();
         clearForm();
-        
+        bookMarkNameInput.classList.remove('is-valid')
+        bookMarkURLInput.classList.remove('is-valid')
     }
 
     else {
         alertInput.classList.remove("d-none")
+
+
     }
 
 }
@@ -123,13 +130,9 @@ function updateProduct(update) {
 }
 
 
-function visit() {
-    const visitButtons = document.querySelectorAll('.visit-button');
-    visitButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            window.open(bookMarkContainer[updateIndex].link, '_blank');
-        });
-    });
+function visit(i    ) {
+    window.open(bookMarkContainer[i].link, '_blank');
+
 }
 
 
